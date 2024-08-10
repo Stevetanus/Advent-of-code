@@ -1,11 +1,11 @@
-const fs = require('fs');
-const data = fs.readFileSync('./2023day3.txt', 'utf8');
+const fs = require("fs");
+const data = fs.readFileSync("2023/day3/input.txt", "utf8");
 const lines = data.split(/\n/);
-if (lines.at(-1) === '') lines.pop();
-console.log('start');
+if (lines.at(-1) === "") lines.pop();
+console.log("start");
 
 const isDigit = (char) => /[0-9]/.test(char);
-const isSymbol = (char) => char !== '.' && !isDigit(char);
+const isSymbol = (char) => char !== "." && !isDigit(char);
 
 function part1(lines) {
   let numStrArr = [];
@@ -64,9 +64,9 @@ function part1(lines) {
   let party = 0;
 
   lines.map((ln, x) => {
-    ln.split('').map((v, y) => {
+    ln.split("").map((v, y) => {
       let parts = [];
-      if (v === '*') {
+      if (v === "*") {
         matchee.map((match) => {
           if (x - 1 >= 0) {
             if (
@@ -109,8 +109,8 @@ function part1(lines) {
   let sum = numStrArr.map(Number).reduce((prev, curr) => {
     return prev + curr;
   }, 0);
-  console.log('p1: ', sum);
-  console.log('p2: ', party);
+  console.log("p1: ", sum);
+  console.log("p2: ", party);
 }
 
 part1(lines);
