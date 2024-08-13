@@ -1,4 +1,4 @@
-inputs, *blocks = open('C:/Users/steve/Desktop/Advent-of-code/2023/day5/2023day5.txt').read().split("\n\n")
+inputs, *blocks = open('2023/day5/input.txt').read().split("\n\n")
 
 # print(inputs, blocks)
 
