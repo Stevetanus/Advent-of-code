@@ -1,18 +1,16 @@
-import * as path from "path";
-import { getLines } from "../../tools/tools";
-const filePath = path.join(__dirname, "input.txt");
+import * as path from 'path';
+import { getLines } from '../../tools/tools';
+const filePath = path.join(__dirname, 'input.txt');
 const lines = getLines(filePath);
 
-console.log({ lines });
-
 const time = lines[0]
-  .split(":")[1]
-  .split(" ")
+  .split(':')[1]
+  .split(' ')
   .filter((v) => v)
   .map(Number);
 const distance = lines[1]
-  .split(":")[1]
-  .split(" ")
+  .split(':')[1]
+  .split(' ')
   .filter((v) => v)
   .map(Number);
 
@@ -34,4 +32,4 @@ const answer = beatCounts.reduce((prev, curr) => {
   return prev * curr;
 }, 1);
 
-console.log("The answer is ", answer);
+console.log('The answer is ', answer);
