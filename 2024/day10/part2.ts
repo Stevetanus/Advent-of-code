@@ -4,8 +4,6 @@ import { getLines } from '../../tools/tools';
 const filePath = path.join(__dirname, 'input.txt');
 const lines = getLines(filePath);
 const grid = lines.map((ln) => ln.split(''));
-const H = lines.length;
-const W = lines[0].length;
 
 let p2 = 0;
 
